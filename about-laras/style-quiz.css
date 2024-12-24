@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #fbe0e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #fbe0e6, #ffcccb);
+}
+
+.quiz-container {
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff0f6;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 5px solid #ffb3b3;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.quiz-header {
+    margin-bottom: 20px;
+}
+
+.sticker-border img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+h2 {
+    font-size: 2rem;
+    color: #e64a62;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.question-container {
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff66b2;
+}
+
+.answer-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.answer {
+    background-color: #ffccff;
+    border-radius: 12px;
+    padding: 15px;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.answer:hover {
+    transform: scale(1.1);
+    background-color: #ffb3ff;
+}
+
+.timer {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ff6666;
+}
+
+#feedback {
+    font-size: 16px;
+    color: #FF69B4;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.correct {
+    color: #32CD32;
+}
+
+.wrong {
+    color: #FF6347;
+}
+
+#attempts-left {
+    margin-top: 20px;
+    color: #333;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ffb3b3;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#progress {
+    height: 15px;
+    width: 0;
+    background-color: #e64a62;
+    transition: width 0.5s ease;
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 30px;
+    border: 2px dashed #e64a62;
+    padding: 20px;
+    background-color: #ffebef;
+    border-radius: 10px;
+    color: #e64a62;
+}
+
+#badge {
+    font-size: 1.5rem;
+    color: #e64a62;
+    margin-top: 10px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+button {
+    background-color: #e64a62;
+    color: #fff;
+    border: 2px solid #ffb3b3;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #ff6666;
+    transform: scale(1.1); /* Membesar saat di-hover */
+}
+
+button:active {
+    transform: translateY(2px) scale(0.95);
+}
+
+button.share, button.restart {
+    background-color: #e64a62;
+    color: #fff;
+    border: 2px solid #ffb3b3;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+button.share:hover, button.restart:hover {
+    transform: scale(1.1); /* Membesar saat di-hover */
+    background-color: #ff6666;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
