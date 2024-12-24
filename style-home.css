@@ -1,0 +1,83 @@
+/* Gaya Body */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffe6f0; /* Warna pastel pink */
+    font-family: 'Dancing Script', cursive; /* Font romantis */
+    position: relative; /* Untuk penempatan elemen absolut */
+    overflow: hidden; /* Mencegah elemen jatuh mempengaruhi tata letak */
+}
+
+/* Kontainer Game */
+.game-container {
+    text-align: center;
+    z-index: 2; /* Agar konten di atas animasi hati */
+}
+
+/* Judul */
+.title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff69b4; /* Warna tulisan */
+}
+
+/* Kontainer Stiker */
+.sticker-container {
+    width: 200px; /* Sesuaikan lebar sesuai keinginan */
+    height: 200px; /* Sesuaikan tinggi sesuai keinginan */
+    border: 2px solid #ff69b4; /* Warna border */
+    border-radius: 10px; /* Membulatkan sudut border */
+    overflow: hidden; /* Menyembunyikan bagian yang terpotong */
+    position: relative; /* Memungkinkan penempatan konten absolut di dalam */
+    margin: 10px auto; /* Memusatkan kontainer */
+}
+
+/* Gambar Stiker */
+.sticker {
+    width: 100%; /* Mengisi lebar kontainer */
+    height: 100%; /* Mengisi tinggi kontainer */
+    object-fit: cover; /* Memastikan gambar diisi dengan baik tanpa distorsi */
+}
+
+/* Tombol Mulai */
+.start-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    font-size: 1em; /* Ukuran font tombol */
+}
+
+/* Warna tombol saat hover */
+.start-button:hover {
+    background-color: #ff1493; /* Warna tombol saat hover */
+}
+
+/* Animasi Hati */
+.heart {
+    position: absolute; /* Memposisikan secara absolut */
+    width: 100px; /* Ukuran hati */
+    height: 100px; /* Ukuran hati */
+    background-color: #ff69b4; /* Warna hati */
+    clip-path: path('M50 15 C65 0, 100 0, 100 40 C100 80, 50 100, 50 100 C50 100, 0 80, 0 40 C0 0, 35 0, 50 15'); /* Membuat bentuk hati */
+    animation: fall 3s forwards; /* Animasi jatuh dari atas ke bawah */
+    z-index: 1; /* Agar hati berada di belakang konten lainnya */
+}
+
+/* Animasi jatuh */
+@keyframes fall {
+    0% {
+        top: -100px; /* Mulai dari atas layar */
+        opacity: 1; /* Hati terlihat */
+    }
+    100% {
+        top: 100vh; /* Jatuh ke bawah layar */
+        opacity: 0; /* Hati menghilang */
+    }
+}

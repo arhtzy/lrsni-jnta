@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-quiz.css">
+</head>
+<body>
+    <!-- Background music -->
+    <audio id="background-music" loop autoplay>
+        <source src="muzyka-iz-kahoot.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Button to play or pause music -->
+    <button onclick="toggleMusic()" id="music-btn">Pause Music</button>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <div class="sticker-border">
+                <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnJmemtlaHp2eWF4aGFpMjBsYTZuMXR2cmVjZzhrdTBqMjAxamppYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9d1Fo0XyIYXzW/giphy.gif" alt="sticker">
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+        <div class="question-container">
+            <h3 class="question" id="question">Loading...</h3>
+            <div class="answer-options" id="answer-options"></div>
+        </div>
+
+        <div class="timer">
+            <span id="time">15</span> detik tersisa
+        </div>
+
+        <div id="feedback"></div>
+        <div id="attempts-left">Kesempatan tersisa: <span id="attempts">2</span></div>
+    </div>
+
+    <!-- Result Section, Hidden Until Quiz Ends -->
+    <div class="result-container" id="result-container" style="display: none;">
+        <h2>Quiz Selesai!</h2>
+        <p id="score-text"></p>
+        
+        <!-- Badge display with animation -->
+        <div id="badge" style="display: none;">
+            <span class="badge-icon">💖</span> <!-- Ikon hati emas -->
+            <p>Horeeee😘😘😘 kamu emang paling mengenal GILANG!!!🌟</p>
+        </div>
+
+        <!-- Share buttons -->
+        <button onclick="shareToWhatsApp()">Bagikan ke WhatsApp</button>
+        <button onclick="shareToInstagram()">Bagikan ke Instagram</button>
+        <button onclick="restartQuiz()">Mulai Ulang Quiz</button> <!-- Tombol untuk mulai ulang quiz -->
+        <button onclick="goToMessagePage()">Lihat Pesan</button>
+    </div>
+
+    <script src="quiz.js"></script>
+
+    <script>
+        // Function to toggle music play/pause
+        function toggleMusic() {
+            const music = document.getElementById('background-music');
+            const musicBtn = document.getElementById('music-btn');
+            if (music.paused) {
+                music.play();
+                musicBtn.textContent = "Pause Music";
+            } else {
+                music.pause();
+                musicBtn.textContent = "Play Music";
+            }
+        }
+    </script>
+</body>
+</html>

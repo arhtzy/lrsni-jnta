@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Mengatur font yang lebih mudah dibaca */
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #F8D2D3, #FF6F61);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    .border-box {
+      border: 10px solid #f8c8d8;
+      padding: 20px;
+      width: 300px;
+      height: 500px;
+      overflow-y: auto;
+      text-align: justify;
+      font-family: 'Pacifico', cursive;
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      background-color: #fdf2f2;
+    }
+
+    /* Spotify Container */
+    .spotify-container {
+      width: 100%;
+      max-width: 350px;
+      height: 100px;
+      background: linear-gradient(135deg, #ffb3ba, #ffdfdf);
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .play-pause-btn {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      background-color: #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .play-pause-btn:hover {
+      background-color: #ff6f61;
+    }
+
+    .play-pause-btn:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    .play-pause-btn i {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .play-pause-btn.play:before {
+      content: "\2022\2022\2022"; /* Tiga titik untuk Play */
+      font-size: 30px;
+      color: #333;
+    }
+
+    .play-pause-btn.pause:before {
+      content: "\25B6"; /* Segitiga untuk Pause */
+      font-size: 30px;
+      color: #333;
+    }
+
+    .progress-bar-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background-color: #ff6f61;
+      transition: width 0.5s ease;
+    }
+
+    .dynamic-text {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+      animation: fadeInOut 4s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+  </style>
+  <title>Anniversary Message with Music</title>
+</head>
+<body>
+
+  <!-- Border Box for Anniversary Message -->
+  <div class="border-box">
+    Di hari yang penuh makna ini, 23 Desember, aku ingin memberimu lebih dari sekadar kata-kata. Aku ingin memberimu sebuah kenangan yang akan selalu mengingatkan kita pada setiap detik indah yang kita lewati, meskipun kadang jarak memisahkan kita. Website ini, yang aku buat dengan setiap bagian dari hatiku, adalah sebuah ungkapan dari semua rasa yang kita bagi—setiap tawa, setiap cerita, setiap kebersamaan yang membentuk kita. Dari yang awalnya kosong, perlahan tumbuh, dan akhirnya mencapai seratus, cinta kita yang terus berkembang, tak terhalang oleh apapun.
+
+    Dan jika suatu saat nanti, ketika kamu merindukanku, saat aku tak lagi bisa berada di sisimu, cukup buka website ini. Rasakan aku dalam setiap kata yang tertulis, dalam setiap klik yang kamu lakukan. Meski aku tak tampak, cintaku akan selalu menyertaimu, seperti hembusan angin yang tak terlihat namun selalu ada, memberi kehangatan yang tak terucapkan. Website ini adalah cara untuk mengatakan bahwa aku akan selalu ada untukmu, meski dalam bentuk yang berbeda—selalu ada di hati dan pikiranmu.
+
+    Aku menyukai segala hal tentangmu—dari cara kamu tersenyum, hingga cara kamu berbicara dengan penuh perhatian. Cara kamu membuat setiap hari terasa lebih indah, hanya dengan hadir di dalamnya. Aku jatuh cinta pada kepribadianmu yang begitu luar biasa, pada kebiasaan-kebiasaan kecilmu yang membuatku merasa lebih dekat denganmu, meskipun jarak kita begitu jauh. Setiap detik bersamamu, aku merasa semakin mengenal dan mencintaimu dalam setiap cara yang tak terhitung.
+
+    Cinta kita dimulai dari 0—tanpa kenal, tanpa halangan, hanya dua hati yang saling tertarik untuk mengenal lebih jauh. Namun, kini cinta itu telah berkembang menjadi seratus, penuh dengan kenangan, tawa, dan kebersamaan. Tapi jika suatu saat nanti, ketika aku sudah tidak ada lagi, cinta itu tidak akan hilang. Cinta yang telah mencapai seratus ini, tidak akan pernah berkurang menjadi 100-0, karena bahkan ketika aku tak ada, cintaku tetap akan ada dalam setiap kenangan yang kita bagi. Cinta kita adalah tentang perjalanan yang tak mengenal akhir—selalu hidup, meski waktu terus berjalan.
+
+    Selamat anniversary, sayang. Ini adalah hadiah kecilku untukmu, sebuah pengingat bahwa aku akan selalu mencintaimu, dalam setiap detik, dalam setiap ruang, dan dalam setiap kenangan kita yang tak akan pernah pudar. Karena, jika tidak dengan Laras, maka Gilang tak akan pernah sama siapa pun. Hanya denganmu, aku menjadi diriku yang utuh—saat kita bersama, aku merasa seperti aku menemukan rumahku. Terima kasih telah menjadi bagian dari setiap langkah hidupku.
+  </div>
+
+  <!-- Spotify Container -->
+  <div class="spotify-container">
+    <div class="play-pause-btn play" onclick="togglePlayPause()">
+      <i></i>  
+    </div>
+    <div class="dynamic-text" id="dynamic-text">Now Playing: Can't Help Falling In Love</div>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- Musik Latar -->
+  <audio id="background-music" loop>
+    <source src="Can't Help Falling In Love - Cello & Piano Cover (Brooklyn Duo).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    let audio = document.getElementById("background-music");
+    let btn = document.querySelector(".play-pause-btn");
+    let progressBar = document.getElementById("progress-bar");
+    let dynamicText = document.getElementById("dynamic-text");
+    let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let analyser = audioContext.createAnalyser();
+    let source = audioContext.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+
+    function updateProgressBar() {
+      let progress = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = progress + '%';
+    }
+
+    function togglePlayPause() {
+      if (btn.classList.contains("play")) {
+        btn.classList.remove("play");
+        btn.classList.add("pause");
+        audioContext.resume().then(() => {
+          audio.play(); 
+        });
+      } else {
+        btn.classList.remove("pause");
+        btn.classList.add("play");
+        audio.pause(); 
+      }
+    }
+
+    audio.addEventListener("timeupdate", updateProgressBar);
+  </script>
+
+</body>
+</html>
